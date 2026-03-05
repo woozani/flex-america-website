@@ -190,21 +190,21 @@ function useInView(threshold = 0.1) {
    ────────────────────────────────────────────────────────── */
 
 const S = {
-  section: (bg = "#060606"): React.CSSProperties => ({
+  section: (bg = "#0D1F40"): React.CSSProperties => ({
     padding: "120px 8vw",
     backgroundColor: bg,
   }),
   label: (): React.CSSProperties => ({
     display: "block",
     fontSize: "11px",
-    color: "#FF4500",
+    color: "#00A878",
     fontWeight: 700,
     letterSpacing: "3px",
     textTransform: "uppercase",
     marginBottom: "14px",
   }),
   h2: (): React.CSSProperties => ({
-    fontFamily: "var(--font-bebas)",
+    fontFamily: "var(--font-montserrat)",
     fontSize: "clamp(42px, 5vw, 72px)",
     color: "#fff",
     lineHeight: 0.93,
@@ -213,7 +213,7 @@ const S = {
   }),
   body: (): React.CSSProperties => ({
     fontSize: "16px",
-    color: "#666",
+    color: "#7A9BBF",
     lineHeight: 1.75,
   }),
   btnPrimary: (): React.CSSProperties => ({
@@ -221,7 +221,7 @@ const S = {
     alignItems: "center",
     gap: "8px",
     padding: "13px 28px",
-    backgroundColor: "#FF4500",
+    backgroundColor: "#00A878",
     color: "#fff",
     borderRadius: "3px",
     textDecoration: "none",
@@ -248,7 +248,7 @@ const S = {
     transition: "border-color 0.2s, transform 0.2s",
   }),
   card: (): React.CSSProperties => ({
-    backgroundColor: "#111",
+    backgroundColor: "#0F1830",
     border: "1px solid rgba(255,255,255,0.05)",
     transition: "all 0.25s ease",
   }),
@@ -275,39 +275,22 @@ function Nav() {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "0 5vw",
-        backgroundColor: scrolled ? "rgba(6,6,6,0.94)" : "transparent",
+        backgroundColor: scrolled ? "rgba(13,31,64,0.96)" : "transparent",
         backdropFilter: scrolled ? "blur(18px)" : "none",
         borderBottom: scrolled
-          ? "1px solid rgba(255,255,255,0.05)"
+          ? "1px solid rgba(0,168,120,0.12)"
           : "none",
         transition: "all 0.35s ease",
       }}
     >
       {/* Logo */}
-      <a
-        href="#"
-        style={{ textDecoration: "none", display: "flex", gap: "4px" }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--font-bebas)",
-            fontSize: "26px",
-            color: "#fff",
-            letterSpacing: "3px",
-          }}
-        >
-          FLEX
-        </span>
-        <span
-          style={{
-            fontFamily: "var(--font-bebas)",
-            fontSize: "26px",
-            color: "#FF4500",
-            letterSpacing: "3px",
-          }}
-        >
-          AMERICA
-        </span>
+      <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.png"
+          alt="Flex America — High-End Signage"
+          style={{ height: "44px", width: "auto", display: "block" }}
+        />
       </a>
 
       {/* Desktop links */}
@@ -338,10 +321,10 @@ function Nav() {
           href="#contact"
           style={S.btnPrimary()}
           onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = "#FF6020")
+            (e.currentTarget.style.backgroundColor = "#00C490")
           }
           onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = "#FF4500")
+            (e.currentTarget.style.backgroundColor = "#00A878")
           }
         >
           Get a Quote
@@ -446,7 +429,7 @@ function Hero() {
         position: "relative",
         overflow: "hidden",
         background:
-          "radial-gradient(ellipse 75% 65% at 65% 50%, rgba(255,69,0,0.09) 0%, transparent 70%), #060606",
+          "radial-gradient(ellipse 75% 65% at 65% 50%, rgba(0,168,120,0.09) 0%, transparent 70%), #0D1F40",
       }}
     >
       {/* Grid background */}
@@ -461,7 +444,7 @@ function Hero() {
         }}
       />
 
-      {/* Orange glow blob */}
+      {/* Teal glow blob */}
       <div
         style={{
           position: "absolute",
@@ -472,7 +455,7 @@ function Hero() {
           height: "560px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(255,69,0,0.14) 0%, rgba(255,179,71,0.04) 45%, transparent 70%)",
+            "radial-gradient(circle, rgba(0,168,120,0.14) 0%, rgba(0,168,120,0.04) 45%, transparent 70%)",
           filter: "blur(48px)",
           pointerEvents: "none",
           animation: "glowPulse 4s ease-in-out infinite",
@@ -489,8 +472,8 @@ function Hero() {
             gap: "10px",
             padding: "7px 16px",
             borderRadius: "100px",
-            border: "1px solid rgba(255,69,0,0.35)",
-            backgroundColor: "rgba(255,69,0,0.07)",
+            border: "1px solid rgba(0,168,120,0.35)",
+            backgroundColor: "rgba(0,168,120,0.07)",
             marginBottom: "32px",
           }}
         >
@@ -499,7 +482,7 @@ function Hero() {
               width: "7px",
               height: "7px",
               borderRadius: "50%",
-              backgroundColor: "#FF4500",
+              backgroundColor: "#00A878",
               display: "inline-block",
               animation: "blink 2s ease-in-out infinite",
             }}
@@ -507,7 +490,7 @@ function Hero() {
           <span
             style={{
               fontSize: "11px",
-              color: "#FF4500",
+              color: "#00A878",
               fontWeight: 700,
               letterSpacing: "2px",
               textTransform: "uppercase",
@@ -521,7 +504,7 @@ function Hero() {
         <h1
           className="hero-headline"
           style={{
-            fontFamily: "var(--font-bebas)",
+            fontFamily: "var(--font-montserrat)",
             fontSize: "clamp(62px, 9vw, 118px)",
             lineHeight: 0.88,
             color: "#fff",
@@ -531,7 +514,7 @@ function Hero() {
         >
           ILLUMINATING
           <br />
-          <span style={{ color: "#FF4500" }}>AMERICA&apos;S</span>
+          <span style={{ color: "#00A878" }}>AMERICA&apos;S</span>
           <br />
           BRANDS
         </h1>
@@ -557,11 +540,11 @@ function Hero() {
             href="#products"
             style={S.btnPrimary()}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#FF6020";
+              e.currentTarget.style.backgroundColor = "#00C490";
               e.currentTarget.style.transform = "translateY(-2px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#FF4500";
+              e.currentTarget.style.backgroundColor = "#00A878";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -594,12 +577,12 @@ function Hero() {
         >
           <div style={{ display: "flex" }}>
             {"★★★★★".split("").map((s, i) => (
-              <span key={i} style={{ color: "#FFB347", fontSize: "15px" }}>
+              <span key={i} style={{ color: "#00A878", fontSize: "15px" }}>
                 {s}
               </span>
             ))}
           </div>
-          <span style={{ color: "#444", fontSize: "13px" }}>
+          <span style={{ color: "#7A9BBF", fontSize: "13px" }}>
             Trusted by sign companies across America
           </span>
         </div>
@@ -650,7 +633,7 @@ function Marquee() {
   return (
     <div
       style={{
-        backgroundColor: "#FF4500",
+        backgroundColor: "#00A878",
         padding: "13px 0",
         overflow: "hidden",
       }}
@@ -715,17 +698,17 @@ function Stats() {
           >
             <div
               style={{
-                fontFamily: "var(--font-bebas)",
+                fontFamily: "var(--font-montserrat)",
                 fontSize: "60px",
                 lineHeight: 1,
-                color: "#FF4500",
+                color: "#00A878",
                 marginBottom: "8px",
                 letterSpacing: "1px",
               }}
             >
               {s.value}
             </div>
-            <div style={{ fontSize: "13px", color: "#555", letterSpacing: "0.3px" }}>
+            <div style={{ fontSize: "13px", color: "#7A9BBF", letterSpacing: "0.3px" }}>
               {s.label}
             </div>
           </div>
@@ -745,14 +728,14 @@ function Products() {
     <section
       id="products"
       ref={ref as React.RefObject<HTMLElement>}
-      style={S.section("#060606")}
+      style={S.section("#0D1F40")}
     >
       <div style={{ marginBottom: "64px" }}>
         <span style={S.label()}>Product Line</span>
         <h2 style={S.h2()}>
           INDUSTRY-LEADING
           <br />
-          <span style={{ color: "#444" }}>SIGN TECHNOLOGY</span>
+          <span style={{ color: "#7A9BBF" }}>SIGN TECHNOLOGY</span>
         </h2>
         <p style={{ ...S.body(), maxWidth: "500px" }}>
           From color-changing acrylics to stainless steel Micro-Perf letters,
@@ -769,7 +752,7 @@ function Products() {
           <div
             key={p.id}
             style={{
-              backgroundColor: "#111",
+              backgroundColor: "#0F1830",
               position: "relative",
               overflow: "hidden",
               opacity: inView ? 1 : 0,
@@ -785,7 +768,7 @@ function Products() {
               if (img) img.style.transform = "scale(1.06)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#111";
+              e.currentTarget.style.backgroundColor = "#0F1830";
               const img = e.currentTarget.querySelector(
                 ".prod-img"
               ) as HTMLElement;
@@ -800,7 +783,7 @@ function Products() {
                   left: "14px",
                   zIndex: 2,
                   padding: "4px 10px",
-                  backgroundColor: p.tag === "NEW" ? "#FF4500" : "#FFB347",
+                  backgroundColor: p.tag === "NEW" ? "#00A878" : "#00A878",
                   color: "#fff",
                   fontSize: "10px",
                   fontWeight: 700,
@@ -816,7 +799,7 @@ function Products() {
               style={{
                 height: "220px",
                 overflow: "hidden",
-                backgroundColor: "#0A0A0A",
+                backgroundColor: "#0A0F1E",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -837,7 +820,7 @@ function Products() {
                   const parent = e.currentTarget.parentElement;
                   if (parent) {
                     parent.style.background =
-                      "linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%)";
+                      "linear-gradient(135deg, #0F1830 0%, #0A0F1E 100%)";
                   }
                   e.currentTarget.style.display = "none";
                 }}
@@ -847,7 +830,7 @@ function Products() {
             <div style={{ padding: "22px 24px 28px" }}>
               <h3
                 style={{
-                  fontFamily: "var(--font-bebas)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: "20px",
                   color: "#fff",
                   marginBottom: "8px",
@@ -856,7 +839,7 @@ function Products() {
               >
                 {p.name}
               </h3>
-              <p style={{ fontSize: "13px", color: "#555", lineHeight: 1.65 }}>
+              <p style={{ fontSize: "13px", color: "#7A9BBF", lineHeight: 1.65 }}>
                 {p.description}
               </p>
             </div>
@@ -878,7 +861,7 @@ function Capabilities() {
       id="services"
       ref={ref as React.RefObject<HTMLElement>}
       style={{
-        ...S.section("#0A0A0A"),
+        ...S.section("#0A0F1E"),
         borderTop: "1px solid rgba(255,255,255,0.04)",
       }}
     >
@@ -898,7 +881,7 @@ function Capabilities() {
           <h2 style={S.h2()}>
             WHAT WE
             <br />
-            <span style={{ color: "#FF4500" }}>MANUFACTURE</span>
+            <span style={{ color: "#00A878" }}>MANUFACTURE</span>
           </h2>
           <p style={{ ...S.body(), marginBottom: "36px" }}>
             We perform subcontract manufacturing services for sign companies
@@ -910,10 +893,10 @@ function Capabilities() {
             href="tel:6034984662"
             style={S.btnPrimary()}
             onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#FF6020")
+              (e.currentTarget.style.backgroundColor = "#00C490")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "#FF4500")
+              (e.currentTarget.style.backgroundColor = "#00A878")
             }
           >
             Call for a Quote: (603) 498-4662 →
@@ -936,23 +919,23 @@ function Capabilities() {
               key={i}
               style={{
                 padding: "28px 22px",
-                backgroundColor: "#111",
+                backgroundColor: "#0F1830",
                 borderTop: "2px solid transparent",
                 transition: "border-color 0.2s, background-color 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderTopColor = "#FF4500";
+                e.currentTarget.style.borderTopColor = "#00A878";
                 e.currentTarget.style.backgroundColor = "#171717";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderTopColor = "transparent";
-                e.currentTarget.style.backgroundColor = "#111";
+                e.currentTarget.style.backgroundColor = "#0F1830";
               }}
             >
               <div
                 style={{
                   fontSize: "18px",
-                  color: "#FF4500",
+                  color: "#00A878",
                   marginBottom: "12px",
                 }}
               >
@@ -991,25 +974,25 @@ function WhyUs() {
       num: "01",
       title: "Top 1% Quality",
       desc: "Our unwavering commitment to quality standards sets us apart. Every product is manufactured to exceed expectations.",
-      accent: "#FF4500",
+      accent: "#00A878",
     },
     {
       num: "02",
       title: "Innovation Leader",
       desc: "We pioneer technologies like Micro-Perf and ChangeGlas™ that become the benchmarks others follow.",
-      accent: "#FFB347",
+      accent: "#00A878",
     },
     {
       num: "03",
       title: "Clear Communication",
       desc: "Excellent, responsive communication at every stage of your order. No surprises — just results.",
-      accent: "#FF4500",
+      accent: "#00A878",
     },
     {
       num: "04",
       title: "Fast Turnaround",
       desc: "Industry-leading manufacturing speed that keeps your sign projects on schedule and clients satisfied.",
-      accent: "#FFB347",
+      accent: "#00A878",
     },
   ];
 
@@ -1017,7 +1000,7 @@ function WhyUs() {
     <section
       id="why-us"
       ref={ref as React.RefObject<HTMLElement>}
-      style={S.section("#060606")}
+      style={S.section("#0D1F40")}
     >
       <div style={{ textAlign: "center", marginBottom: "72px" }}>
         <span style={S.label()}>Why Choose Us</span>
@@ -1031,7 +1014,7 @@ function WhyUs() {
         >
           THE FLEX AMERICA
           <br />
-          <span style={{ color: "#333" }}>DIFFERENCE</span>
+          <span style={{ color: "#4A6A8A" }}>DIFFERENCE</span>
         </h2>
       </div>
 
@@ -1044,7 +1027,7 @@ function WhyUs() {
             key={i}
             style={{
               padding: "44px 32px",
-              backgroundColor: "#0E0E0E",
+              backgroundColor: "#0A0F1E",
               position: "relative",
               overflow: "hidden",
               opacity: inView ? 1 : 0,
@@ -1055,12 +1038,12 @@ function WhyUs() {
               (e.currentTarget.style.backgroundColor = "#141414")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "#0E0E0E")
+              (e.currentTarget.style.backgroundColor = "#0A0F1E")
             }
           >
             <div
               style={{
-                fontFamily: "var(--font-bebas)",
+                fontFamily: "var(--font-montserrat)",
                 fontSize: "88px",
                 color: "rgba(255,255,255,0.025)",
                 position: "absolute",
@@ -1083,7 +1066,7 @@ function WhyUs() {
             />
             <h3
               style={{
-                fontFamily: "var(--font-bebas)",
+                fontFamily: "var(--font-montserrat)",
                 fontSize: "24px",
                 color: "#fff",
                 marginBottom: "14px",
@@ -1092,7 +1075,7 @@ function WhyUs() {
             >
               {item.title}
             </h3>
-            <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
+            <p style={{ fontSize: "14px", color: "#7A9BBF", lineHeight: 1.7 }}>
               {item.desc}
             </p>
           </div>
@@ -1113,7 +1096,7 @@ function Process() {
       id="process"
       ref={ref as React.RefObject<HTMLElement>}
       style={{
-        ...S.section("#0A0A0A"),
+        ...S.section("#0A0F1E"),
         borderTop: "1px solid rgba(255,255,255,0.04)",
       }}
     >
@@ -1122,7 +1105,7 @@ function Process() {
         <h2 style={S.h2()}>
           GET STARTED
           <br />
-          <span style={{ color: "#333" }}>IN 3 STEPS</span>
+          <span style={{ color: "#4A6A8A" }}>IN 3 STEPS</span>
         </h2>
       </div>
 
@@ -1150,19 +1133,19 @@ function Process() {
                 width: "54px",
                 height: "54px",
                 borderRadius: "50%",
-                border: "2px solid rgba(255,69,0,0.5)",
+                border: "2px solid rgba(0,168,120,0.5)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 marginBottom: "28px",
-                backgroundColor: "rgba(255,69,0,0.07)",
+                backgroundColor: "rgba(0,168,120,0.07)",
               }}
             >
               <span
                 style={{
-                  fontFamily: "var(--font-bebas)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: "20px",
-                  color: "#FF4500",
+                  color: "#00A878",
                   letterSpacing: "1px",
                 }}
               >
@@ -1171,7 +1154,7 @@ function Process() {
             </div>
             <h3
               style={{
-                fontFamily: "var(--font-bebas)",
+                fontFamily: "var(--font-montserrat)",
                 fontSize: "26px",
                 color: "#fff",
                 marginBottom: "14px",
@@ -1180,7 +1163,7 @@ function Process() {
             >
               {s.title}
             </h3>
-            <p style={{ fontSize: "14px", color: "#555", lineHeight: 1.7 }}>
+            <p style={{ fontSize: "14px", color: "#7A9BBF", lineHeight: 1.7 }}>
               {s.desc}
             </p>
           </div>
@@ -1200,9 +1183,9 @@ function BrochureBanner() {
       style={{
         padding: "72px 8vw",
         background:
-          "linear-gradient(135deg, rgba(255,69,0,0.12) 0%, rgba(255,179,71,0.04) 100%)",
-        borderTop: "1px solid rgba(255,69,0,0.12)",
-        borderBottom: "1px solid rgba(255,69,0,0.12)",
+          "linear-gradient(135deg, rgba(0,168,120,0.12) 0%, rgba(0,168,120,0.04) 100%)",
+        borderTop: "1px solid rgba(0,168,120,0.12)",
+        borderBottom: "1px solid rgba(0,168,120,0.12)",
       }}
     >
       <div
@@ -1217,7 +1200,7 @@ function BrochureBanner() {
         <div>
           <h2
             style={{
-              fontFamily: "var(--font-bebas)",
+              fontFamily: "var(--font-montserrat)",
               fontSize: "clamp(28px, 4vw, 48px)",
               color: "#fff",
               marginBottom: "8px",
@@ -1238,10 +1221,10 @@ function BrochureBanner() {
             rel="noopener noreferrer"
             style={S.btnPrimary()}
             onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#FF6020")
+              (e.currentTarget.style.backgroundColor = "#00C490")
             }
             onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "#FF4500")
+              (e.currentTarget.style.backgroundColor = "#00A878")
             }
           >
             ↓ Download Now
@@ -1274,7 +1257,7 @@ function About() {
     <section
       id="about"
       ref={ref as React.RefObject<HTMLElement>}
-      style={S.section("#060606")}
+      style={S.section("#0D1F40")}
     >
       <div
         className="two-col"
@@ -1296,7 +1279,7 @@ function About() {
         >
           <div
             style={{
-              backgroundColor: "#111",
+              backgroundColor: "#0F1830",
               border: "1px solid rgba(255,255,255,0.06)",
               padding: "52px",
               position: "relative",
@@ -1309,7 +1292,7 @@ function About() {
           >
             <div
               style={{
-                fontFamily: "var(--font-bebas)",
+                fontFamily: "var(--font-montserrat)",
                 fontSize: "130px",
                 lineHeight: 0.82,
                 color: "rgba(255,255,255,0.035)",
@@ -1327,16 +1310,16 @@ function About() {
             <div>
               <div
                 style={{
-                  fontFamily: "var(--font-bebas)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: "30px",
-                  color: "#FF4500",
+                  color: "#00A878",
                   letterSpacing: "2px",
                   marginBottom: "6px",
                 }}
               >
                 FLEX AMERICA
               </div>
-              <div style={{ fontSize: "13px", color: "#444", letterSpacing: "0.5px" }}>
+              <div style={{ fontSize: "13px", color: "#7A9BBF", letterSpacing: "0.5px" }}>
                 Subcontract Manufacturing Excellence
               </div>
             </div>
@@ -1349,8 +1332,8 @@ function About() {
               left: "-10px",
               width: "44px",
               height: "44px",
-              borderTop: "3px solid #FF4500",
-              borderLeft: "3px solid #FF4500",
+              borderTop: "3px solid #00A878",
+              borderLeft: "3px solid #00A878",
             }}
           />
           <div
@@ -1360,8 +1343,8 @@ function About() {
               right: "-10px",
               width: "44px",
               height: "44px",
-              borderBottom: "3px solid #FFB347",
-              borderRight: "3px solid #FFB347",
+              borderBottom: "3px solid #00A878",
+              borderRight: "3px solid #00A878",
             }}
           />
         </div>
@@ -1378,7 +1361,7 @@ function About() {
           <h2 style={S.h2()}>
             SUPPLIER OF
             <br />
-            <span style={{ color: "#FF4500" }}>HIGH-END SIGNAGE</span>
+            <span style={{ color: "#00A878" }}>HIGH-END SIGNAGE</span>
           </h2>
           <p style={{ ...S.body(), marginBottom: "20px" }}>
             Flex America is a sign manufacturing company based out of New Hampshire,
@@ -1394,17 +1377,17 @@ function About() {
           {/* President quote */}
           <blockquote
             style={{
-              borderLeft: "3px solid #FF4500",
+              borderLeft: "3px solid #00A878",
               paddingLeft: "20px",
               marginBottom: "36px",
             }}
           >
-            <p style={{ ...S.body(), fontStyle: "italic", color: "#888", marginBottom: "10px" }}>
+            <p style={{ ...S.body(), fontStyle: "italic", color: "#8AACBF", marginBottom: "10px" }}>
               &ldquo;Flex America is made up of dedicated signmakers, progressive managers, and problem
               solvers. All are committed to the highest level of quality, service, and technology.
               More importantly, we are committed to the success of our customers.&rdquo;
             </p>
-            <cite style={{ fontSize: "12px", color: "#555", letterSpacing: "0.5px", fontStyle: "normal" }}>
+            <cite style={{ fontSize: "12px", color: "#7A9BBF", letterSpacing: "0.5px", fontStyle: "normal" }}>
               — John McNair, President
             </cite>
           </blockquote>
@@ -1417,9 +1400,9 @@ function About() {
               <div key={i}>
                 <div
                   style={{
-                    fontFamily: "var(--font-bebas)",
+                    fontFamily: "var(--font-montserrat)",
                     fontSize: "34px",
-                    color: "#FF4500",
+                    color: "#00A878",
                     letterSpacing: "1px",
                     lineHeight: 1,
                     marginBottom: "4px",
@@ -1427,7 +1410,7 @@ function About() {
                 >
                   {s.val}
                 </div>
-                <div style={{ fontSize: "12px", color: "#444" }}>{s.label}</div>
+                <div style={{ fontSize: "12px", color: "#7A9BBF" }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -1480,7 +1463,7 @@ function FAQ() {
       id="faq"
       ref={ref as React.RefObject<HTMLElement>}
       style={{
-        ...S.section("#0A0A0A"),
+        ...S.section("#0A0F1E"),
         borderTop: "1px solid rgba(255,255,255,0.04)",
       }}
     >
@@ -1497,7 +1480,7 @@ function FAQ() {
           <span style={S.label()}>FAQ</span>
           <h2 style={S.h2()}>
             COMMON{" "}
-            <span style={{ color: "#FF4500" }}>QUESTIONS</span>
+            <span style={{ color: "#00A878" }}>QUESTIONS</span>
           </h2>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
@@ -1508,7 +1491,7 @@ function FAQ() {
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(16px)",
                 transition: `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`,
-                backgroundColor: "#111",
+                backgroundColor: "#0F1830",
                 border: "1px solid rgba(255,255,255,0.05)",
               }}
             >
@@ -1531,7 +1514,7 @@ function FAQ() {
                   style={{
                     fontSize: "15px",
                     fontWeight: 500,
-                    color: open === i ? "#FF4500" : "#ccc",
+                    color: open === i ? "#00A878" : "#ccc",
                     transition: "color 0.2s",
                     fontFamily: "var(--font-inter)",
                   }}
@@ -1541,7 +1524,7 @@ function FAQ() {
                 <span
                   style={{
                     fontSize: "20px",
-                    color: open === i ? "#FF4500" : "#444",
+                    color: open === i ? "#00A878" : "#7A9BBF",
                     flexShrink: 0,
                     transition: "transform 0.25s, color 0.2s",
                     transform: open === i ? "rotate(45deg)" : "rotate(0deg)",
@@ -1595,7 +1578,7 @@ function Contact() {
   const inputStyle: React.CSSProperties = {
     width: "100%",
     padding: "12px 16px",
-    backgroundColor: "#0A0A0A",
+    backgroundColor: "#0A0F1E",
     border: "1px solid rgba(255,255,255,0.07)",
     borderRadius: "3px",
     color: "#fff",
@@ -1610,7 +1593,7 @@ function Contact() {
       id="contact"
       ref={ref as React.RefObject<HTMLElement>}
       style={{
-        ...S.section("#0A0A0A"),
+        ...S.section("#0A0F1E"),
         borderTop: "1px solid rgba(255,255,255,0.04)",
       }}
     >
@@ -1635,7 +1618,7 @@ function Contact() {
           <h2 style={S.h2()}>
             REQUEST A
             <br />
-            <span style={{ color: "#FF4500" }}>QUOTE TODAY</span>
+            <span style={{ color: "#00A878" }}>QUOTE TODAY</span>
           </h2>
           <p style={{ ...S.body(), marginBottom: "48px" }}>
             Ready to elevate your sign projects? Contact our team for a detailed
@@ -1673,18 +1656,18 @@ function Contact() {
                   gap: "16px",
                   textDecoration: "none",
                   padding: "18px 22px",
-                  backgroundColor: "#111",
+                  backgroundColor: "#0F1830",
                   border: "1px solid rgba(255,255,255,0.05)",
                   borderRadius: "3px",
                   transition: "border-color 0.2s, background-color 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(255,69,0,0.3)";
+                  e.currentTarget.style.borderColor = "rgba(0,168,120,0.3)";
                   e.currentTarget.style.backgroundColor = "#171717";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)";
-                  e.currentTarget.style.backgroundColor = "#111";
+                  e.currentTarget.style.backgroundColor = "#0F1830";
                 }}
               >
                 <span style={{ fontSize: "22px" }}>{c.icon}</span>
@@ -1692,7 +1675,7 @@ function Contact() {
                   <div
                     style={{
                       fontSize: "10px",
-                      color: "#444",
+                      color: "#7A9BBF",
                       textTransform: "uppercase",
                       letterSpacing: "1.5px",
                       marginBottom: "3px",
@@ -1721,8 +1704,8 @@ function Contact() {
             <div
               style={{
                 padding: "56px",
-                backgroundColor: "#111",
-                border: "1px solid rgba(255,69,0,0.25)",
+                backgroundColor: "#0F1830",
+                border: "1px solid rgba(0,168,120,0.25)",
                 textAlign: "center",
               }}
             >
@@ -1731,8 +1714,8 @@ function Contact() {
                   width: "56px",
                   height: "56px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(255,69,0,0.1)",
-                  border: "2px solid #FF4500",
+                  backgroundColor: "rgba(0,168,120,0.1)",
+                  border: "2px solid #00A878",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -1744,7 +1727,7 @@ function Contact() {
               </div>
               <h3
                 style={{
-                  fontFamily: "var(--font-bebas)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: "30px",
                   color: "#fff",
                   marginBottom: "10px",
@@ -1761,7 +1744,7 @@ function Contact() {
               onSubmit={handleSubmit}
               style={{
                 padding: "44px",
-                backgroundColor: "#111",
+                backgroundColor: "#0F1830",
                 border: "1px solid rgba(255,255,255,0.06)",
                 display: "flex",
                 flexDirection: "column",
@@ -1770,7 +1753,7 @@ function Contact() {
             >
               <h3
                 style={{
-                  fontFamily: "var(--font-bebas)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: "26px",
                   color: "#fff",
                   marginBottom: "4px",
@@ -1791,7 +1774,7 @@ function Contact() {
                     <label
                       style={{
                         fontSize: "11px",
-                        color: "#444",
+                        color: "#7A9BBF",
                         textTransform: "uppercase",
                         letterSpacing: "1px",
                         display: "block",
@@ -1809,7 +1792,7 @@ function Contact() {
                       }
                       style={inputStyle}
                       onFocus={(e) =>
-                        (e.target.style.borderColor = "rgba(255,69,0,0.45)")
+                        (e.target.style.borderColor = "rgba(0,168,120,0.45)")
                       }
                       onBlur={(e) =>
                         (e.target.style.borderColor = "rgba(255,255,255,0.07)")
@@ -1830,7 +1813,7 @@ function Contact() {
                     <label
                       style={{
                         fontSize: "11px",
-                        color: "#444",
+                        color: "#7A9BBF",
                         textTransform: "uppercase",
                         letterSpacing: "1px",
                         display: "block",
@@ -1848,7 +1831,7 @@ function Contact() {
                       }
                       style={inputStyle}
                       onFocus={(e) =>
-                        (e.target.style.borderColor = "rgba(255,69,0,0.45)")
+                        (e.target.style.borderColor = "rgba(0,168,120,0.45)")
                       }
                       onBlur={(e) =>
                         (e.target.style.borderColor = "rgba(255,255,255,0.07)")
@@ -1862,7 +1845,7 @@ function Contact() {
                 <label
                   style={{
                     fontSize: "11px",
-                    color: "#444",
+                    color: "#7A9BBF",
                     textTransform: "uppercase",
                     letterSpacing: "1px",
                     display: "block",
@@ -1885,7 +1868,7 @@ function Contact() {
                     minHeight: "110px",
                   }}
                   onFocus={(e) =>
-                    (e.target.style.borderColor = "rgba(255,69,0,0.45)")
+                    (e.target.style.borderColor = "rgba(0,168,120,0.45)")
                   }
                   onBlur={(e) =>
                     (e.target.style.borderColor = "rgba(255,255,255,0.07)")
@@ -1897,10 +1880,10 @@ function Contact() {
                 type="submit"
                 style={{ ...S.btnPrimary(), justifyContent: "center", paddingTop: "15px", paddingBottom: "15px" }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#FF6020")
+                  (e.currentTarget.style.backgroundColor = "#00C490")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#FF4500")
+                  (e.currentTarget.style.backgroundColor = "#00A878")
                 }
               >
                 Send Request →
@@ -1922,7 +1905,7 @@ function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#060606",
+        backgroundColor: "#0D1F40",
         borderTop: "1px solid rgba(255,255,255,0.05)",
         padding: "72px 8vw 32px",
       }}
@@ -1938,32 +1921,18 @@ function Footer() {
       >
         {/* Brand col */}
         <div>
-          <div style={{ display: "flex", gap: "4px", marginBottom: "18px" }}>
-            <span
-              style={{
-                fontFamily: "var(--font-bebas)",
-                fontSize: "26px",
-                color: "#fff",
-                letterSpacing: "3px",
-              }}
-            >
-              FLEX
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-bebas)",
-                fontSize: "26px",
-                color: "#FF4500",
-                letterSpacing: "3px",
-              }}
-            >
-              AMERICA
-            </span>
+          <div style={{ marginBottom: "18px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Flex America — High-End Signage"
+              style={{ height: "40px", width: "auto", display: "block" }}
+            />
           </div>
           <p
             style={{
               fontSize: "14px",
-              color: "#444",
+              color: "#7A9BBF",
               lineHeight: 1.75,
               maxWidth: "260px",
               marginBottom: "24px",
@@ -1976,7 +1945,7 @@ function Footer() {
             href="tel:6034984662"
             style={{
               fontSize: "16px",
-              color: "#FF4500",
+              color: "#00A878",
               textDecoration: "none",
               fontWeight: 600,
             }}
@@ -2011,12 +1980,12 @@ function Footer() {
                 href="#products"
                 style={{
                   fontSize: "13px",
-                  color: "#444",
+                  color: "#7A9BBF",
                   textDecoration: "none",
                   transition: "color 0.2s",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#bbb")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#444")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#7A9BBF")}
               >
                 {p}
               </a>
@@ -2052,12 +2021,12 @@ function Footer() {
                 href={href}
                 style={{
                   fontSize: "13px",
-                  color: "#444",
+                  color: "#7A9BBF",
                   textDecoration: "none",
                   transition: "color 0.2s",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#bbb")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#444")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#7A9BBF")}
               >
                 {label}
               </a>
@@ -2080,13 +2049,13 @@ function Footer() {
             Contact
           </h4>
           <div
-            style={{ fontSize: "13px", color: "#444", lineHeight: 2 }}
+            style={{ fontSize: "13px", color: "#7A9BBF", lineHeight: 2 }}
           >
             <a
               href="tel:6034984662"
               style={{
                 display: "block",
-                color: "#FF4500",
+                color: "#00A878",
                 textDecoration: "none",
                 marginBottom: "4px",
               }}
@@ -2101,12 +2070,12 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: "#444",
+                color: "#7A9BBF",
                 textDecoration: "none",
                 transition: "color 0.2s",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#bbb")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#444")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#7A9BBF")}
             >
               flex-america.com
             </a>
@@ -2126,10 +2095,10 @@ function Footer() {
           gap: "12px",
         }}
       >
-        <span style={{ fontSize: "12px", color: "#2a2a2a" }}>
+        <span style={{ fontSize: "12px", color: "#4A6A8A" }}>
           © {year} Flex America. All rights reserved.
         </span>
-        <span style={{ fontSize: "12px", color: "#2a2a2a" }}>
+        <span style={{ fontSize: "12px", color: "#4A6A8A" }}>
           Top 1% Sign Technology
         </span>
       </div>
