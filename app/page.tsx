@@ -20,7 +20,7 @@ const PRODUCTS = [
     id: 1,
     name: "Micro-Perf Letters",
     description:
-      "Stainless steel channel letters with a mirrored finish that transforms to brilliant white or colored illumination when lit.",
+      "Stainless steel channel letters that turn white (or colored) when illuminated.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-4.png",
     tag: null,
   },
@@ -28,23 +28,23 @@ const PRODUCTS = [
     id: 2,
     name: "Micro-Perf 2.0",
     description:
-      "Next-generation acrylic LED technology that faithfully replicates the warm, atmospheric glow of classic neon signs.",
+      "Next generation product development with unique colored surfaces. 20 standard color patterns available — all colors turn white when illuminated. Max height 5.25' without seams. Min stroke 1/2\" (12.7 mm).",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-5.png",
     tag: "NEW",
   },
   {
     id: 3,
-    name: "Neon Style Acrylic",
+    name: "Neon Style Acrylic Letters",
     description:
-      "Modern acrylic LED technology that captures the timeless aesthetic of old-fashioned neon with modern LED efficiency.",
+      "Acrylic LED technology simulating old-fashioned neon. Returns may be black or metallic. Max height 6'6\". Min height 1.5\". No hot spots. Any color available.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-3.png",
     tag: null,
   },
   {
     id: 4,
-    name: "ChangeGlas™",
+    name: "ChangeGlas™ Color Changing Acrylic Letters",
     description:
-      "Proprietary color-changing acrylic with special pigment chemistry that transforms from colored to pure white when illuminated.",
+      "Colored acrylic sheets with special pigment chemistry that changes to white when illuminated.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-1.png",
     tag: "SIGNATURE",
   },
@@ -52,7 +52,7 @@ const PRODUCTS = [
     id: 5,
     name: "Prestige Metallic Letters",
     description:
-      "Block acrylic with premium metalized finishes — available in polished or matte, opaque or translucent formats.",
+      "Block acrylic with metalized finishes, polished or matte formats, as well as opaque or translucent formats.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-2.png",
     tag: null,
   },
@@ -60,7 +60,7 @@ const PRODUCTS = [
     id: 6,
     name: "Micro-Perf Wall Cover",
     description:
-      "Revolutionary technology extending Micro-Perf imaging to entire wall surfaces for full-scale immersive brand environments.",
+      "Newest technology enabling Micro-Perf imaging to extend to entire wall surfaces. Available in static or integrated options — fluid and dynamic illumination while otherwise a solid display.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-6.png",
     tag: "NEW",
   },
@@ -68,7 +68,7 @@ const PRODUCTS = [
     id: 7,
     name: "Future Signage",
     description:
-      "As a world leader in sign technology R&D, we stay at the forefront of emerging innovations for brand identity.",
+      "As a world leader in developing sign technology, we stay on top of emerging technologies favored by companies seeking brand identity.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-7.png",
     tag: null,
   },
@@ -76,7 +76,7 @@ const PRODUCTS = [
     id: 8,
     name: "Thin Letter Light",
     description:
-      "Block acrylic with embedded LED lighting and ultra-thin stroke capability — minimum stroke width of just 1mm.",
+      "Block acrylic with embedded LED lighting and ultra thin stroke (minimum 1mm).",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-8.png",
     tag: null,
   },
@@ -84,7 +84,7 @@ const PRODUCTS = [
     id: 9,
     name: "Specialty Acrylics",
     description:
-      "Expert LED and acrylic combinations for innovative sign making. Specialists in block acrylic machining and fabrication.",
+      "We consistently innovate our LED and Acrylic combinations for effective sign making. We are specialists in block acrylic machining as well as expert fabrication of acrylic.",
     image: "http://www.flex-america.com/assets/img/photos/ProductCard-9.png",
     tag: null,
   },
@@ -118,10 +118,10 @@ const CAPABILITIES = [
 ];
 
 const STATS = [
-  { value: "#1", label: "Top 1% Technology Rank" },
-  { value: "9+", label: "Proprietary Product Lines" },
-  { value: "100%", label: "Quality Commitment" },
-  { value: "24hr", label: "Rush Capability" },
+  { value: "35+", label: "Years of Manufacturing Experience" },
+  { value: "Top 1%", label: "Sign Technology Rank" },
+  { value: "24hr", label: "Quote Turnaround Time" },
+  { value: "2 Wk", label: "Standard Manufacturing Lead Time" },
 ];
 
 const PROCESS_STEPS = [
@@ -1381,23 +1381,38 @@ function About() {
             <span style={{ color: "#FF4500" }}>HIGH-END SIGNAGE</span>
           </h2>
           <p style={{ ...S.body(), marginBottom: "20px" }}>
-            Flex America performs subcontract manufacturing services for sign
-            companies nationwide. Our customers value our commitment to the
-            highest quality standards, attention to detail, excellent
-            communication, and quick manufacturing turnaround time.
+            Flex America is a sign manufacturing company based out of New Hampshire,
+            with production, research, and development facilities in South Korea.
+            We have been manufacturing on-premise signage, acrylic signs, and channel
+            letters for over 35 years.
           </p>
-          <p style={{ ...S.body(), marginBottom: "44px" }}>
-            We supply innovative color-changing cast acrylic sheets and thick
-            block letter sheets. We manufacture high-technology finished channel
-            letters and block letter signs with technologies including
-            Micro-Perf stainless steel, metalized block acrylic, neon style
-            letters, and ultra-thin letters.
+          <p style={{ ...S.body(), marginBottom: "32px" }}>
+            We deliver our technology worldwide servicing Europe, the Middle East,
+            and the Far East. Our factory is ISO 9001 and KSO 9001 approved.
+            Major customers such as Samsung and Hyundai have benefitted from our expertise.
           </p>
+          {/* President quote */}
+          <blockquote
+            style={{
+              borderLeft: "3px solid #FF4500",
+              paddingLeft: "20px",
+              marginBottom: "36px",
+            }}
+          >
+            <p style={{ ...S.body(), fontStyle: "italic", color: "#888", marginBottom: "10px" }}>
+              &ldquo;Flex America is made up of dedicated signmakers, progressive managers, and problem
+              solvers. All are committed to the highest level of quality, service, and technology.
+              More importantly, we are committed to the success of our customers.&rdquo;
+            </p>
+            <cite style={{ fontSize: "12px", color: "#555", letterSpacing: "0.5px", fontStyle: "normal" }}>
+              — John McNair, President
+            </cite>
+          </blockquote>
           <div style={{ display: "flex", gap: "48px", flexWrap: "wrap" }}>
             {[
-              { val: "Top 1%", label: "Technology Rank" },
-              { val: "9+", label: "Product Lines" },
-              { val: "Fast", label: "Turnaround" },
+              { val: "35+", label: "Years Experience" },
+              { val: "NH", label: "Headquarters" },
+              { val: "S. Korea", label: "Manufacturing & R&D" },
             ].map((s, i) => (
               <div key={i}>
                 <div
@@ -1423,14 +1438,148 @@ function About() {
 }
 
 /* ──────────────────────────────────────────────────────────
+   FAQ
+   ────────────────────────────────────────────────────────── */
+
+const FAQS = [
+  {
+    q: "Is Flex America UL Certified?",
+    a: "Yes. Flex America is UL Certified, ensuring all manufactured signs meet the rigorous safety and quality standards required by the industry.",
+  },
+  {
+    q: "What quality certifications does Flex America hold?",
+    a: "Our factory is ISO 9001 and KSO 9001 approved, reflecting our commitment to consistent, world-class manufacturing quality.",
+  },
+  {
+    q: "Where is Flex America manufactured?",
+    a: "Flex America is headquartered in New Hampshire. Production, research, and development facilities are located in South Korea, allowing us to combine American service with advanced Korean manufacturing technology.",
+  },
+  {
+    q: "How quickly can I get a quote?",
+    a: "We turn quotes around within 24 hours. Submit your project details and our team will respond promptly with pricing.",
+  },
+  {
+    q: "What is the standard manufacturing lead time?",
+    a: "Standard manufacturing lead time is 2 weeks. Rush options may be available — contact us to discuss your project timeline.",
+  },
+  {
+    q: "How long does shipping take?",
+    a: "Air freight typically takes approximately 2 weeks. Ocean freight takes approximately 55 days. We deliver worldwide, servicing Europe, the Middle East, and the Far East.",
+  },
+  {
+    q: "What sizes and quantities do you accommodate?",
+    a: "We work with all sizes and quantities — from small specialty orders to large-scale production runs. Contact us to discuss your specific project requirements.",
+  },
+];
+
+function FAQ() {
+  const { ref, inView } = useInView();
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <section
+      id="faq"
+      ref={ref as React.RefObject<HTMLElement>}
+      style={{
+        ...S.section("#0A0A0A"),
+        borderTop: "1px solid rgba(255,255,255,0.04)",
+      }}
+    >
+      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <div
+          style={{
+            opacity: inView ? 1 : 0,
+            transform: inView ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.6s ease, transform 0.6s ease",
+            textAlign: "center",
+            marginBottom: "56px",
+          }}
+        >
+          <span style={S.label()}>FAQ</span>
+          <h2 style={S.h2()}>
+            COMMON{" "}
+            <span style={{ color: "#FF4500" }}>QUESTIONS</span>
+          </h2>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+          {FAQS.map((faq, i) => (
+            <div
+              key={i}
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(16px)",
+                transition: `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`,
+                backgroundColor: "#111",
+                border: "1px solid rgba(255,255,255,0.05)",
+              }}
+            >
+              <button
+                onClick={() => setOpen(open === i ? null : i)}
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "20px 24px",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  gap: "16px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: 500,
+                    color: open === i ? "#FF4500" : "#ccc",
+                    transition: "color 0.2s",
+                    fontFamily: "var(--font-inter)",
+                  }}
+                >
+                  {faq.q}
+                </span>
+                <span
+                  style={{
+                    fontSize: "20px",
+                    color: open === i ? "#FF4500" : "#444",
+                    flexShrink: 0,
+                    transition: "transform 0.25s, color 0.2s",
+                    transform: open === i ? "rotate(45deg)" : "rotate(0deg)",
+                  }}
+                >
+                  +
+                </span>
+              </button>
+              {open === i && (
+                <div
+                  style={{
+                    padding: "0 24px 22px",
+                    fontSize: "14px",
+                    color: "#666",
+                    lineHeight: 1.75,
+                    fontFamily: "var(--font-inter)",
+                  }}
+                >
+                  {faq.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────
    CONTACT
    ────────────────────────────────────────────────────────── */
 
 function Contact() {
   const { ref, inView } = useInView();
   const [form, setForm] = useState({
-    name: "",
-    company: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
@@ -1634,8 +1783,8 @@ function Contact() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
                 {(
                   [
-                    { key: "name", label: "Full Name *", type: "text", required: true },
-                    { key: "company", label: "Company", type: "text", required: false },
+                    { key: "firstName", label: "First Name *", type: "text", required: true },
+                    { key: "lastName", label: "Last Name *", type: "text", required: true },
                   ] as const
                 ).map((f) => (
                   <div key={f.key}>
@@ -1944,6 +2093,9 @@ function Footer() {
             >
               (603) 498-4662
             </a>
+            <span style={{ display: "block", marginBottom: "4px" }}>
+              New Hampshire, USA
+            </span>
             <a
               href="http://www.flex-america.com"
               target="_blank"
@@ -2002,6 +2154,7 @@ export default function HomePage() {
       <Process />
       <BrochureBanner />
       <About />
+      <FAQ />
       <Contact />
       <Footer />
     </>
