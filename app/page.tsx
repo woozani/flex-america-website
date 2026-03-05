@@ -303,7 +303,7 @@ function Nav() {
             key={l.href}
             href={l.href}
             style={{
-              color: "#777",
+              color: "#7A9BBF",
               textDecoration: "none",
               fontSize: "12px",
               fontWeight: 600,
@@ -312,7 +312,7 @@ function Nav() {
               transition: "color 0.2s",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#777")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#7A9BBF")}
           >
             {l.label}
           </a>
@@ -523,7 +523,7 @@ function Hero() {
         <p
           style={{
             fontSize: "17px",
-            color: "#777",
+            color: "#7A9BBF",
             lineHeight: 1.75,
             maxWidth: "480px",
             marginBottom: "44px",
@@ -676,8 +676,8 @@ function Stats() {
     <section
       ref={ref as React.RefObject<HTMLElement>}
       style={{
-        backgroundColor: "#0C0C0C",
-        borderBottom: "1px solid rgba(255,255,255,0.04)",
+        backgroundColor: "#0A0F1E",
+        borderBottom: "1px solid rgba(0,168,120,0.10)",
         padding: "0",
       }}
     >
@@ -761,7 +761,7 @@ function Products() {
               cursor: "default",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#181818";
+              e.currentTarget.style.backgroundColor = "#0A1828";
               const img = e.currentTarget.querySelector(
                 ".prod-img"
               ) as HTMLElement;
@@ -925,7 +925,7 @@ function Capabilities() {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderTopColor = "#00A878";
-                e.currentTarget.style.backgroundColor = "#171717";
+                e.currentTarget.style.backgroundColor = "#0A1828";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderTopColor = "transparent";
@@ -1035,7 +1035,7 @@ function WhyUs() {
               transition: `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`,
             }}
             onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#141414")
+              (e.currentTarget.style.backgroundColor = "#0A1828")
             }
             onMouseLeave={(e) =>
               (e.currentTarget.style.backgroundColor = "#0A0F1E")
@@ -1209,7 +1209,7 @@ function BrochureBanner() {
           >
             DOWNLOAD OUR PRODUCT BROCHURE
           </h2>
-          <p style={{ fontSize: "15px", color: "#666" }}>
+          <p style={{ fontSize: "15px", color: "#7A9BBF" }}>
             Top 1% in LED, Acrylic &amp; Stainless Steel Micro-Perf Sign
             Technology
           </p>
@@ -1538,7 +1538,7 @@ function FAQ() {
                   style={{
                     padding: "0 24px 22px",
                     fontSize: "14px",
-                    color: "#666",
+                    color: "#7A9BBF",
                     lineHeight: 1.75,
                     fontFamily: "var(--font-inter)",
                   }}
@@ -1663,7 +1663,7 @@ function Contact() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "rgba(0,168,120,0.3)";
-                  e.currentTarget.style.backgroundColor = "#171717";
+                  e.currentTarget.style.backgroundColor = "#0A1828";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)";
@@ -1735,7 +1735,7 @@ function Contact() {
               >
                 MESSAGE RECEIVED
               </h3>
-              <p style={{ color: "#666", fontSize: "15px" }}>
+              <p style={{ color: "#7A9BBF", fontSize: "15px" }}>
                 We&apos;ll get back to you shortly with a detailed quote.
               </p>
             </div>
